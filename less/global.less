@@ -44,3 +44,31 @@ a {
   margin: 0 auto;  
 }
 
+.btn {
+  .btn(@btn-bg-color, @porcelain);
+  @media @phone {
+    width:100%;
+    padding:20px;
+  }
+}
+
+.btn.ani {
+  // animation:gra 5s infinite;
+  // animation-direction:reverse;
+  background-image:linear-gradient(black, white);
+  z-index:100;
+
+  &:before {
+      background-image:linear-gradient(white,black);
+      opacity: 0;
+      width: 100%;
+      z-index: -100;
+      transition: opacity 0.45s;
+    }
+
+  &:hover {
+      &:before {
+        opacity: 1;
+      }
+  } 
+}// END ANIMATION

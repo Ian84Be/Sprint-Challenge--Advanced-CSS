@@ -1,3 +1,14 @@
+@keyframes gra {
+  0% {
+    background: linear-gradient(red, yellow, green);
+  }
+  50% {
+    background: linear-gradient(yellow, green, red);
+  }
+  100% {
+    background: linear-gradient(green, red, yellow);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -167,6 +178,41 @@ a {
   width: 100%;
   margin: 0 auto;
 }
+.btn {
+  border: 1px solid #22283A;
+  background: #22283A;
+  color: #F6F7F8;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  font-size: 1.75rem;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #F6F7F8;
+  color: #22283A;
+}
+@media (max-width:500px) {
+  .btn {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.btn.ani {
+  background-image: linear-gradient(black, white);
+  z-index: 100;
+}
+.btn.ani:before {
+  background-image: linear-gradient(white, black);
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity 0.45s;
+}
+.btn.ani:hover:before {
+  opacity: 1;
+}
 .nav-container {
   border-bottom: 1px solid #F1F1F1;
   background: rgba(246, 246, 246, 0.8);
@@ -277,38 +323,17 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
-.home .walk .walk-text .btn {
-  border: 1px solid #22283A;
-  background: #22283A;
-  color: #F6F7F8;
-  border-radius: 5px;
-  padding: 10px;
-  width: 100px;
-  text-align: center;
-  font-size: 1.75rem;
-}
-.home .walk .walk-text .btn:hover {
-  cursor: pointer;
-  background: #F6F7F8;
-  color: #22283A;
-}
-@media (max-width:500px) {
-  .home .walk .walk-text .btn {
-    width: 100%;
-    padding: 20px;
-  }
-}
-.home .walk .walk-img {
+.home .walk-img {
   width: 46%;
   margin-left: 4%;
 }
 @media (max-width:500px) {
-  .home .walk .walk-img {
+  .home .walk-img {
     width: 100%;
     margin: 0 0 15px 0;
   }
 }
-.home .walk .walk-img img {
+.home .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;

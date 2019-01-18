@@ -1,3 +1,19 @@
+// @keyframes fader {
+//     0% {background:black;}
+// }
+
+@keyframes gra {
+    0% {
+        background:linear-gradient(red, yellow, green);
+    }
+    50% {
+        background:linear-gradient(yellow, green,red);
+    }
+    100% {
+        background:linear-gradient(green,red,yellow);
+    }
+}  
+
 .btn(@bg, @fontColor) {
     border:1px solid @bg;
     background:@bg;
