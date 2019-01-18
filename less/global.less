@@ -10,11 +10,14 @@ html {
 html, body {
   font-family: 'Ubuntu', sans-serif;
   color: @main-font-color;
+  display:flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Russo One', sans-serif;
   color: @header-font-color;
+  font-size: 3.5rem;
 }
 
 h2 {
@@ -30,9 +33,42 @@ p {
   line-height: 1.4;
 }
 
+a {
+  font-size:1.6rem;
+  line-height: 1.4;
+}
+
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;  
 }
 
+.btn {
+  .btn(@btn-bg-color, @porcelain);
+  @media @phone {
+    width:100%;
+    padding:20px;
+  }
+}
+
+.btn.ani {
+  // animation:gra 5s infinite;
+  // animation-direction:reverse;
+  background-image:linear-gradient(black, white);
+  z-index:100;
+
+  &:before {
+      background-image:linear-gradient(white,black);
+      opacity: 0;
+      width: 100%;
+      z-index: -100;
+      transition: opacity 0.45s;
+    }
+
+  &:hover {
+      &:before {
+        opacity: 1;
+      }
+  } 
+}// END ANIMATION

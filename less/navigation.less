@@ -1,1 +1,33 @@
-// Navigation code here
+.nav-container {
+    border-bottom:1px solid @nav-border;
+    background:rgba(246,246,246,0.8);
+    // opacity:0.8;
+    width:100%;
+    padding:10px 0;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    nav {
+        // border:2px solid yellow;
+        margin-top:10px;
+        max-width:800px;
+        
+        a {
+            margin:0 10px;
+            text-decoration: none;
+            color:@nav-font;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        }
+
+    }
+
+    // border:1px solid magenta;
+    position:fixed;
+    height:100px;
+
+}

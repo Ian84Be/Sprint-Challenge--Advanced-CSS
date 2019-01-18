@@ -1,1 +1,37 @@
-// Mixins Here
+// @keyframes fader {
+//     0% {background:black;}
+// }
+
+@keyframes gra {
+    0% {
+        background:linear-gradient(red, yellow, green);
+    }
+    50% {
+        background:linear-gradient(yellow, green,red);
+    }
+    100% {
+        background:linear-gradient(green,red,yellow);
+    }
+}  
+
+.btn(@bg, @fontColor) {
+    border:1px solid @bg;
+    background:@bg;
+    color:@fontColor;
+    border-radius: 5px;
+    padding:10px;
+    width:100px;
+    text-align: center;
+    font-size:1.75rem;
+
+    &:hover {
+        cursor:pointer;
+        background:@fontColor;
+        color:@bg;
+    }
+}
+
+.mobile-style() {
+    width:100%;
+    padding:15px;
+}
