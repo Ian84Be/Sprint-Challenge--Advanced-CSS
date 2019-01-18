@@ -52,7 +52,8 @@ A preprocessor makes CSS structure more readable and easier to maintain.
 
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
 
-I love everything about it. Variables are the best.
+I love everything about it.
+Variables are the best.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
