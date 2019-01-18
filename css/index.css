@@ -144,6 +144,7 @@ h4,
 h5 {
   font-family: 'Russo One', sans-serif;
   color: #23293B;
+  font-size: 3.5rem;
 }
 h2 {
   font-size: 3.2rem;
@@ -155,10 +156,36 @@ p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
+a {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+}
+.nav-container {
+  border-bottom: 1px solid #F1F1F1;
+  background: #F6F6F6;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-container nav {
+  margin-top: 10px;
+  max-width: 800px;
+}
+.nav-container nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #454A59;
+}
+.nav-container nav a:hover {
+  text-decoration: underline;
 }
 footer {
   color: #22283B;
@@ -170,11 +197,17 @@ footer {
   justify-content: center;
   align-items: center;
 }
+.home {
+  margin-bottom: 5px;
+}
 .home .intro h2 {
   padding: 15px;
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro img {
+  border-radius: 5px;
 }
 .home .space-images {
   display: flex;
